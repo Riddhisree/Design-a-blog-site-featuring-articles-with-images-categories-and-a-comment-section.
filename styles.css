@@ -1,0 +1,498 @@
+:root {
+  --orange: #e67e22;
+  --black: #484141;
+  --light-color: #777;
+  --border: .1rem solid rgba(0, 0, 0, .2);
+
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #111;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 7%;
+}
+
+.header .logo {
+  color: white;
+  font-size: 3.5rem;
+  margin-right: auto;
+}
+
+.header .logo span {
+  color: var(--orange);
+}
+
+.header .icons i {
+  height: 4.5rem;
+  line-height: 4.5rem;
+  width: 4.5rem;
+  text-align: center;
+  color: var(--black);
+  background: #eee;
+  border-radius: 50%;
+  margin-left: .7rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.header .icons i:hover {
+  color: #fff;
+  background: var(--orange);
+}
+
+.header .search-form {
+  position: absolute;
+  background: #fff;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  top: 110%;
+  right: 7%;
+  height: 6rem;
+  width: 50rem;
+  padding: 1rem;
+  display: none;
+}
+
+.header .search-form.active {
+  display: flex;
+}
+
+.header .search-form #search-box {
+  width: 100%;
+  border: var(--border);
+  border-radius: .5rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: var(--black);
+  height: 100%;
+}
+
+.header .search-form label {
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-right: .5rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.header .search-form label:hover {
+  color: var(--orange);
+}
+
+#menu-bars {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  padding: 20px 25px;
+  color: #e9dfdf;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+ul li ul.dropdown li {
+  display: block;
+  background: #111;
+  margin: 2px 0px;
+}
+
+ul li ul.dropdown {
+  width: auto;
+
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+ul li a:hover {
+  background: #c8700b;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+section {
+  padding: 2rem 7%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: var(--black);
+  color: #fff;
+  border-radius: .5rem;
+  padding: .9rem 3rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  background: var(--orange);
+}
+
+.banner {
+  min-height: 80vh;
+  background: url(https://rare-gallery.com/mocahbig/426941-landscape-nature-water-snowy-mountain-night-stars.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding-top: 2rem;
+}
+
+.banner .content {
+  text-align: center;
+  background: rgba(22, 1, 1, 0.57);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  padding: 3rem;
+  max-width: 50rem;
+}
+
+.banner .content h3 {
+  font-size: 4rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(251, 249, 247);
+  text-transform: uppercase;
+}
+
+.banner .content p {
+  font-size: 1.7rem;
+  color: rgb(249, 121, 0);
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 1.5rem;
+  background: #eee;
+}
+
+.container .posts-container .post {
+  width: 100%;
+  padding: 2rem;
+  background: #fff;
+  border: var(--border);
+  border-radius: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.container .posts-container .post .image {
+  height: 60rem;
+  width: 100%;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.container .posts-container .post .date {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+.container .posts-container .post .title {
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.container .posts-container .post .text {
+  color: var(--light-color);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  padding: 1rem 0;
+}
+
+.container .posts-container .links {
+  border-top: var(--border);
+  margin-top: .5rem;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.container .posts-container .links .icon {
+  padding-right: 1rem;
+}
+
+.container .posts-container .links a {
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+.container .posts-container .links a i {
+  padding-right: .2rem;
+  color: var(--black);
+}
+
+.container .posts-container .links a:hover {
+  color: var(--orange);
+}
+
+.container .posts-container .links a:hover i {
+  color: var(--orange);
+}
+
+button {
+  background: #3b392e;
+  color: #f4e9e9;
+  border-radius: 5px;
+  padding: 4px 4px;
+  border: 0px;
+  cursor: pointer;
+  font-family: Fredoka;
+  font-size: 14pt;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  color: #f1f1f1;
+  background-color: #f6a309fb;
+}
+
+textarea {
+
+  border: 2px ridge rgb(229, 142, 80);
+  font-style: italic;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+}
+
+.container .sidebar .box {
+
+  border: var(--border);
+  border-radius: .5rem;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.container .sidebar .box .title {
+  padding: 1.5rem;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--black);
+  text-transform: capitalize;
+}
+
+.container .sidebar .box .category {
+  padding: 1rem 1.5rem;
+}
+
+.container .sidebar .box .category a {
+  padding: .4rem 0;
+  font-size: 1.5rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .sidebar .box .category a span {
+  background: var(--black);
+  color: #fff;
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.container .sidebar .box .category a:hover {
+  color: var(--orange);
+}
+
+.container .sidebar .box .category a:hover span {
+  background-color: var(--orange);
+}
+
+.container .sidebar .box .p-post {
+  padding: 1rem 2rem;
+}
+
+.container .sidebar .box .p-post a {
+  padding: 1rem 0;
+  display: block;
+}
+
+.container .sidebar .box .p-post a h3 {
+  color: var(--black);
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.container .sidebar .box .p-post a span {
+  color: var(--black);
+  font-size: 1.5rem;
+}
+
+.container .sidebar .box .p-post a span i {
+  padding-right: .2rem;
+}
+
+.container .sidebar .box .p-post a:hover h3 {
+  color: var(--orange);
+}
+
+.container .sidebar .box .tags {
+  padding: 1rem;
+}
+
+.container .sidebar .box .tags a {
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  color: var(--black);
+  border-radius: .5rem;
+  border: var(--border);
+  margin: .5rem;
+}
+
+.container .sidebar .box .tags a:hover {
+  background: var(--black);
+  color: #fff;
+}
+
+
+footer {
+  position: relative;
+  width: 110%;
+  height: auto;
+  padding: 30px 100px;
+  background: #111;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: space-between;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.footer-container .sec {
+  margin-right: 30px;
+}
+
+.footer-container .sec.aboutus {
+  width: 40%;
+}
+
+.footer-container h2 {
+  position: relative;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-container h2::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: rgb(214, 131, 14);
+}
+
+footer p {
+  color: #fff;
+}
+
+.sci {
+  margin: 20px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: .5s;
+}
+
+.sci li a:hover {
+  background: rgb(255, 187, 77);
+}
+
+
+.footer-container .contactBx {
+  width: calc(35% - 90px);
+  margin-right: 0 !important;
+}
+
+
+.contactBx .info li {
+  display: flex !important;
+  margin-bottom: 16px;
+}
+
+.contactBx .info li span:nth-child(1) {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contactBx .info li span {
+  color: #999;
+}
